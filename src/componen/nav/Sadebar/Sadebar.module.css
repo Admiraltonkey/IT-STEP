@@ -1,0 +1,31 @@
+.nav {
+    grid-area: n;
+background-color: aqua;
+    padding: 20px;
+    display: flex;
+}
+
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: gold;
+}
+
+.friendsImage img {
+    width: 30px;
+    height: 25px;
+    border-radius: 100px; /* Радиус скругления */
+    border: 2px solid green; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+    margin-right: 5px;
+
+}
+
+.friendsName {
+    font-size: 10px;
+    font-family: Beirut;
+}
