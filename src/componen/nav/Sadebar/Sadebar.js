@@ -4,6 +4,7 @@ import s from './Sadebar.module.css';
 
 
 const Sadebar = (props) => {
+
     return (
         <div className={s.nav}>
             {props.friends.map(f =>
