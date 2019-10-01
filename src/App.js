@@ -1,18 +1,18 @@
 import React from 'react';
 import './App.css';
-import  Header from './componen/header/header';
 import Nav from './componen/nav/nav';
 import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./componen/Dialogs/DialogsContainer";
 import SadebarContainer from "./componen/nav/Sadebar/SadebarContainer";
 import UsersContainer from "./componen/Users/UsersContainer";
 import ProfileContainer from "./componen/profile/ProfileContainer";
+import HeaderContainer from "./componen/header/HeaderContainer";
 
 const App = (props) => {
     return (
         <BrowserRouter>
         <div className="App-wrapper">
-            <Header/>
+            <HeaderContainer/>
             <div>
             <Nav/>
             <SadebarContainer/>
