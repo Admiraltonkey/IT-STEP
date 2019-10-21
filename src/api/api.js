@@ -18,13 +18,32 @@ export const usersAPI = {
         return instance.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
     },
     getProfile(userId) {
+        console.warn('Obsolete method.Please profileAPI object.')
+        return profileAPI.getProfile(userId)
+    }
+}
+
+export const profileAPI = {
+    getProfile(userId) {
         return instance.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId)
+    },
+    getStatus(userId){
+        return instance.get(`https://social-network.samuraijs.com/api/1.0/profile/status/` + userId)
+    },
+    updateStatus(status){
+        return instance.put(`https://social-network.samuraijs.com/api/1.0/profile/status`,{status})
     }
 }
 
 export const authAPI = {
     me() {
         return instance.get(`https://social-network.samuraijs.com/api/1.0/auth/me`)
+    },
+    login(email,password,rememberMe = false) {
+        return instance.post(`https://social-network.samuraijs.com/api/1.0/auth/login`,{email,password,rememberMe})
+    },
+    logout() {
+        return instance.delete(`https://social-network.samuraijs.com/api/1.0/auth/login`)
     }
 }
 
